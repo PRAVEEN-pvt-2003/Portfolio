@@ -1,4 +1,4 @@
-import portfolioimg from '../assets/Portfolio.jpg';
+import portfolioimg from '../assets/portfolio.jpg';
 import todoimg from '../assets/to-do.jpg';
 
 const projectData = [
