@@ -19,7 +19,7 @@ function Header() {
           <h1 className="praveen">
             I'm Praveen <span className="highlight">Kumar</span>
           </h1>
-          <h3 className="desig">Frontend Developer   </h3>
+          <h3 className="desig">Aspirant Frontend Developer   </h3>
 
           <button className="about-button">
             <a href="#About">
