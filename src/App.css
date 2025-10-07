@@ -110,65 +110,81 @@
 
 .skills-container {
   text-align: center;
-  padding: 2rem;
-  margin-top: 25%;
+  padding: 3rem 1rem;
+  margin-top: 15%;
   scroll-margin-top: 50px;
+  font-family: "Poppins", sans-serif;
+  /* background: #121212; */
+  color: #fff;
 }
 
 .skills-container h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  font-family: "Montserrat", sans-serif;
-  color: #ffffff;
-  font-weight: 500;
+  font-size: 2.8rem;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
   letter-spacing: 4px;
+  color: #00d9ff;
+  text-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
 }
 
 .skills-section {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 .category-title {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   color: #00d9ff;
-  font-weight: 500;
-  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .skills-grid {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .skill-card {
-  width: 120px;
-  height: 120px;
-  background-color: #313131;
-  color: white;
-  border-radius: 8px;
+  width: 130px;
+  height: 130px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
   padding: 1rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(0, 217, 255, 0.3);
 }
+
 .skill-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-8px) scale(1.1);
+  border-color: #00d9ff;
+  box-shadow: 0 8px 30px rgba(0, 217, 255, 0.4);
 }
 
 .skill-icon {
-  font-size: 2rem;
-  margin-bottom: 10px;
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+  color: #00d9ff;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: rotate(15deg) scale(1.2);
 }
 
 .skill-name {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1rem;
+  color: #f0f0f0;
+  text-align: center;
 }
 
 .popup-overlay {
@@ -177,9 +193,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 123, 255, 0.15);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -189,51 +204,52 @@
 
 .popup-content {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem;
   max-width: 900px;
   width: 95%;
-  background-color: transparent;
-  animation: slideZoom 0.4s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 217, 255, 0.4);
   align-items: center;
-  color: #ffffff;
+  color: #fff;
+  animation: slideZoom 0.4s ease;
 }
 
 .left-card,
 .right-card {
-  background: #1f1f1f;
-  border-radius: 12px;
-  padding: 2rem;
+  border-radius: 16px;
+  padding: 1.8rem;
   flex: 1;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  transition: transform 0.4s ease;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 30px rgba(0, 217, 255, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .left-card {
   text-align: center;
 }
 
-.right-card {
-  flex: 1.6;
-  text-align: left;
-}
-
 .right-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #00d9ff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .right-card p {
   font-size: 1rem;
   line-height: 1.6;
-  color: #f0f0f0;
+  color: #e0e0e0;
 }
 
 .connection-line {
   width: 4px;
   height: 80%;
-  background: linear-gradient(to bottom, #00c6ff, #0072ff);
+  background: linear-gradient(to bottom, #00d9ff, #0072ff);
   border-radius: 2px;
   animation: glowPulse 1.8s infinite ease-in-out;
   box-shadow: 0 0 12px #00d9ff;
@@ -271,7 +287,12 @@
   }
 }
 
+/* Responsive */
 @media (max-width: 768px) {
+  .skills-grid {
+    gap: 1rem;
+  }
+
   .popup-content {
     flex-direction: column;
     gap: 1rem;
@@ -283,16 +304,15 @@
     height: 4px;
     margin: 1rem auto;
     background: linear-gradient(to right, #00c6ff, #0072ff);
-    border-radius: 2px;
-    animation: glowPulse 1.8s infinite ease-in-out;
-    box-shadow: 0 0 12px #00d9ff;
   }
 
   .left-card,
   .right-card {
     flex: 1 1 100%;
+    padding: 1.2rem;
   }
 }
+
 
 .Project-section {
   margin-top: 25%;
